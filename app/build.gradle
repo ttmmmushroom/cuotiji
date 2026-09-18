@@ -1,0 +1,28 @@
+plugins {
+  id 'com.android.application'
+}
+
+android {
+  namespace 'com.cuotiji.app'
+  compileSdk 34
+
+  defaultConfig {
+    applicationId 'com.cuotiji.app'
+    minSdk 24
+    targetSdk 34
+    versionCode 1
+    versionName '1.0'
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+    }
+  }
+
+  // 不需要 Kotlin/AndroidX，纯 WebView 壳，用官方 Gradle 插件即可
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
+  }
+}
